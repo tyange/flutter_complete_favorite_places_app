@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_favorite_places_app/widgets/image_input.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:flutter_complete_favorite_places_app/providers/user_places.dart';
@@ -42,11 +43,16 @@ class _AddPlaceScreenState extends ConsumerState<AddPlaceScreen> {
         child: Column(
           children: [
             TextField(
-                decoration: const InputDecoration(labelText: 'Title'),
-                controller: _titleController,
-                style: TextStyle(
-                  color: Theme.of(context).colorScheme.onBackground,
-                )),
+              decoration: const InputDecoration(labelText: 'Title'),
+              controller: _titleController,
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.onBackground,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ImageInput(),
             const SizedBox(
               height: 16,
             ),
